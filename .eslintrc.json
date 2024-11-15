@@ -1,7 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
 
-    "rules": {
+   "rules": {
     // 1. Enforce consistent indentation (2 spaces)
     "indent": ["error", 2],
 
@@ -14,304 +14,133 @@
     // 4. Disallow unused variables
     "no-unused-vars": "error",
 
-    // 5. Disallow unused expressions
-    "no-unused-expressions": "error",
-
-    // 6. Enforce a maximum line length (e.g., 80 characters)
-    "max-len": ["error", { "code": 80 }],
-
-    // 7. Disallow the use of 'console'
-    "no-console": "error",
-
-    // 8. Enforce consistent line breaks (LF or CRLF)
-    "linebreak-style": ["error", "unix"],
-
-    // 9. Require semicolons at the end of statements
-    "semi": ["error", "always"],
-
-    // 10. Disallow empty blocks
-    "no-empty": "error",
-
-    // 11. Enforce camelCase naming convention
-    "camelcase": "error",
-
-    // 12. Disallow trailing spaces
-    "no-trailing-spaces": "error",
-
-    // 13. Require return statements in functions that are not void
-    "consistent-return": "error",
-
-    // 14. Disallow unnecessary `else` after `return`
-    "no-else-return": "error",
-
-    // 15. Disallow unnecessary boolean casts
-    "no-extra-boolean-cast": "error",
-
-    // 16. Require all functions to have a return type annotation (for TypeScript)
-    "@typescript-eslint/explicit-function-return-type": "error",
-
-    // 17. Require all variables to be declared using 'const' or 'let' (disallow 'var')
-    "no-use-before-define": "error",
-
-    // 18. Enforce curly braces for all control statements (if, else, etc.)
-    "curly": ["error", "all"],
-
-    // 19. Require 'use strict' at the top of every file (for JS files)
+    // 5. Enforce strict mode globally
     "strict": ["error", "global"],
 
-    // 20. Require function parameters to be typed (for TypeScript)
-    "@typescript-eslint/explicit-module-boundary-types": "error",
+    // 6. Disallow the use of 'console'
+    "no-console": "error",
 
-    // 21. Disallow function declarations in nested blocks
-    "no-inner-declarations": "error",
+    // 7. Require semicolons at the end of statements
+    "semi": ["error", "always"],
 
-    // 22. Enforce the use of template literals instead of string concatenation
-    "prefer-template": "error",
+    // 8. Enforce the consistent use of the 'this' keyword
+    "no-invalid-this": "error",
 
-    // 23. Enforce no spaces before function parentheses
-    "space-before-function-paren": ["error", "never"],
+    // 9. Enforce camelCase naming convention
+    "camelcase": "error",
 
-    // 24. Disallow assignment operators in conditional expressions
-    "no-cond-assign": "error",
+    // 10. Disallow trailing spaces
+    "no-trailing-spaces": "error",
 
-    // 25. Enforce consistent spacing inside parentheses
-    "space-in-parens": ["error", "never"],
+    // 11. Disallow nested ternary expressions
+    "no-nested-ternary": "error",
 
-    // 26. Require default case in switch statements
+    // 12. Require default case in switch statements
     "default-case": "error",
 
-    // 27. Enforce consistent spacing after `//` and `/*` comments
-    "spaced-comment": ["error", "always"],
-
-    // 28. Require object and array destructuring
-    "prefer-destructuring": ["error", {
-      "object": true,
-      "array": true
-    }],
-
-    // 29. Enforce no magic numbers (e.g., use constants instead)
-    "no-magic-numbers": ["error", {
-      "ignore": [0, 1],
-      "ignoreArrayIndexes": true
-    }],
-
-    // 30. Disallow the use of alert(), confirm(), and prompt()
-    "no-alert": "error",
-
-    // 31. Enforce default export for modules
-    "import/prefer-default-export": "error",
-
-    // 32. Disallow assignment in `return` statements
-    "no-return-assign": "error",
-
-    // 33. Disallow the use of arguments.callee
-    "no-caller": "error",
-
-    // 34. Disallow function declarations in loops
-    "no-loop-func": "error",
-
-    // 35. Disallow redeclaration of variables
-    "no-redeclare": "error",
-
-    // 36. Enforce a consistent type annotation style for TypeScript
-    "@typescript-eslint/explicit-module-boundary-types": "error",
-
-    // 37. Require explicit access modifiers for TypeScript class members
-    "@typescript-eslint/explicit-member-accessibility": ["error", {
-      "accessibility": "explicit"
-    }],
-
-    // 38. Enforce no unused imports (for TypeScript)
-    "@typescript-eslint/no-unused-vars": "error",
-
-    // 39. Enforce consistent return behavior in functions (i.e., always return a value or always don't)
-    "consistent-return": "error",
-
-    // 40. Disallow the use of `eval()`
+    // 13. Disallow the use of `eval()`
     "no-eval": "error",
 
-    // 41. Disallow the use of the `with` statement
-    "no-with": "error",
+    // 14. Enforce consistent spacing before function parentheses
+    "space-before-function-paren": ["error", "always"],
 
-    // 42. Disallow unnecessary function bindings
-    "no-useless-bind": "error",
+    // 15. Enforce consistent spacing inside parentheses
+    "space-in-parens": ["error", "always"],
 
-    // 43. Enforce consistent use of `const` over `let` for variable declarations that are never reassigned
-    "prefer-const": "error",
-
-    // 44. Require promises to be handled properly (with .catch or async/await)
-    "promise/always-return": "error",
-
-    // 45. Disallow the use of the `__proto__` property
-    "no-proto": "error",
-
-    // 46. Disallow assignment to the `arguments` object
-    "no-shadow-restricted-names": "error",
-
-    // 47. Enforce no async function declaration in loops
-    "no-await-in-loop": "error",
-
-    // 48. Disallow `new` keyword to create instances of built-in types
-    "no-new-wrappers": "error",
-
-    // 49. Require `super()` in constructors of subclasses
-    "class-methods-use-this": "error",
-
-    // 50. Enforce no unnecessary ternary expressions
-    "no-unneeded-ternary": "error",
-
-    // 51. Enforce consistent spacing before and after the colon in object literals
-    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
-
-    // 52. Disallow the use of `arguments`
-    "no-arguments": "error",
-
-    // 53. Disallow global variable declarations
-    "no-global-assign": "error",
-
-    // 54. Require the use of the `const` keyword for variables that are never reassigned
-    "prefer-const": "error",
-
-    // 55. Enforce the use of async/await instead of promises
-    "no-promise-executor-return": "error",
-
-    // 56. Disallow bitwise operators
-    "no-bitwise": "error",
-
-    // 57. Enforce consistent formatting of regular expressions
-    "no-misleading-character-class": "error",
-
-    // 58. Disallow the use of `console` in production code
-    "no-console": ["error", { "allow": ["warn", "error"] }],
-
-    // 59. Require explicit return types on functions (TypeScript)
-    "@typescript-eslint/explicit-function-return-type": "error",
-
-    // 60. Disallow the use of `for...in` without `hasOwnProperty`
-    "guard-for-in": "error",
-
-    // 61. Disallow the use of the `__proto__` property
-    "no-proto": "error",
-
-    // 62. Enforce a single return in functions
-    "consistent-return": "error",
-
-    // 63. Enforce a consistent code style for callbacks (e.g., arrow functions)
-    "prefer-arrow-callback": "error",
-
-    // 64. Disallow empty functions
-    "no-empty-function": "error",
-
-    // 65. Disallow the use of `continue` statement
-    "no-continue": "error",
-
-    // 66. Require error handling in callbacks
-    "callback-return": "error",
-
-    // 67. Disallow the use of `new` for primitive types
-    "no-new": "error",
-
-    // 68. Enforce the use of `===` and `!==` in type comparisons
-    "eqeqeq": ["error", "always"],
-
-    // 69. Enforce the use of `Array.isArray()` over `instanceof Array`
-    "prefer-array-literal": "error",
-
-    // 70. Disallow nested ternary expressions
-    "no-nested-ternary": "error",
-
-    // 71. Enforce the use of `for` loops instead of `for...in` for arrays
-    "prefer-for-of": "error",
-
-    // 72. Require the use of `super()` in constructors of subclasses
-    "class-methods-use-this": "error",
-
-    // 73. Enforce type consistency in expressions
-    "@typescript-eslint/no-unsafe-return": "error",
-
-    // 74. Disallow `arguments` to be used in functions
-    "no-arguments": "error",
-
-    // 75. Enforce consistent use of spacing in arrow function bodies
-    "arrow-body-style": ["error", "as-needed"],
-
-    // 76. Disallow the use of `eval()`
-    "no-eval": "error",
-
-    // 77. Enforce consistent naming for boolean variables
-    "no-boolean-literal-compare": "error",
-
-    // 78. Enforce the use of the `final` keyword in classes for constants
-    "no-duplicate-imports": "error",
-
-    // 79. Enforce spaces inside curly braces in object literals
-    "object-curly-spacing": ["error", "always"],
-
-    // 80. Disallow duplicate keys in object literals
-    "no-dupe-keys": "error",
-
-    // 81. Enforce the use of arrow functions for callbacks
-    "prefer-arrow-callback": "error",
-
-    // 82. Enforce consistent use of `null` or `undefined`
-    "no-null": "error",
-
-    // 83. Disallow `return` statements in `finally` blocks
-    "no-return-assign": "error",
-
-    // 84. Enforce the use of destructuring for array elements
-    "prefer-destructuring": "error",
-
-    // 85. Enforce consistent use of template literals over string concatenation
-    "prefer-template": "error",
-
-    // 86. Enforce the use of `for` loops for iteration instead of `while`
-    "prefer-for-of": "error",
-
-    // 87. Enforce specific error handling in asynchronous code
-    "prefer-async-await": "error",
-
-    // 88. Require the use of `const` for variables that never change
-    "prefer-const": "error",
-
-    // 89. Enforce `typeof` checks to be one of `string`, `number`, `boolean`, etc.
-    "valid-typeof": "error",
-
-    // 90. Enforce strict equality checks
-    "eqeqeq": "error",
-
-    // 91. Enforce consistent function names
-    "func-name-matching": "error",
-
-    // 92. Enforce the use of `export` over `module.exports`
-    "import/no-commonjs": "error",
-
-    // 93. Disallow the use of nested ternary operators
-    "no-nested-ternary": "error",
-
-    // 94. Require `const` declarations to be initialized
-    "prefer-const": "error",
-
-    // 95. Disallow the use of `arguments` in function expressions
-    "no-arguments": "error",
-
-    // 96. Require that class methods use `this` when accessing instance properties
-    "class-methods-use-this": "error",
-
-    // 97. Disallow unassigned variables
-    "no-unused-vars": "error",
-
-    // 98. Enforce destructuring assignment for parameters
-    "prefer-destructuring": "error",
-
-    // 99. Disallow unnecessary `else` after `return`
+    // 16. Disallow unnecessary 'else' after 'return'
     "no-else-return": "error",
 
-    // 100. Enforce consistent type definitions for function parameters and return types
-    "@typescript-eslint/explicit-function-return-type": "error"
+    // 17. Disallow the use of the 'with' statement
+    "no-with": "error",
 
+    // 18. Require the use of the 'const' keyword for variables that are never reassigned
+    "prefer-const": "error",
+
+    // 19. Disallow redundant 'return' statements in functions
+    "no-useless-return": "error",
+
+    // 20. Enforce consistent line breaks between class members
+    "lines-between-class-members": ["error", "always"],
+
+    // 21. Disallow the use of `arguments.callee`
+    "no-caller": "error",
+
+    // 22. Require all functions to have a return type annotation (for TypeScript)
+    "@typescript-eslint/explicit-function-return-type": "error",
+
+    // 23. Enforce the use of arrow functions for callbacks
+    "prefer-arrow-callback": "error",
+
+    // 24. Disallow the use of `arguments` object in functions
+    "no-arguments": "error",
+
+    // 25. Disallow the use of 'continue' statement
+    "no-continue": "error",
+
+    // 26. Enforce type-checking in switch cases
+    "no-switch-case-fall-through": "error",
+
+    // 27. Enforce consistent return behavior in functions (either always return or never return)
+    "consistent-return": "error",
+
+    // 28. Disallow function declarations in loops
+    "no-loop-func": "error",
+
+    // 29. Require function parameters to be typed (for TypeScript)
+    "@typescript-eslint/explicit-module-boundary-types": "error",
+
+    // 30. Require class members to have explicit access modifiers (for TypeScript)
+    "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "explicit" }],
+
+    // 31. Disallow the use of `__proto__` property
+    "no-proto": "error",
+
+    // 32. Disallow assignment to the `arguments` object
+    "no-shadow-restricted-names": "error",
+
+    // 33. Require destructuring for all assignments
+    "prefer-destructuring": ["error", { "object": true, "array": true }],
+
+    // 34. Require `super()` to be called in subclass constructors
+    "class-methods-use-this": "error",
+
+    // 35. Disallow reassigning function parameters
+    "no-param-reassign": "error",
+
+    // 36. Enforce the use of template literals instead of string concatenation
+    "prefer-template": "error",
+
+    // 38. Enforce consistent spacing after '//' comments
+    "spaced-comment": ["error", "always"],
+
+    // 39. Enforce consistent code style in array and object literals
+    "object-curly-spacing": ["error", "always"],
+
+    // 41. Disallow unnecessary function bindings (i.e., `.bind()`)
+    "no-useless-bind": "error",
+
+    // 44. Enforce function declarations to be at the top of the scope
+    "no-inner-declarations": "error",
+
+    // 45. Disallow redundant boolean casts
+    "no-extra-boolean-cast": "error",
+
+    // 46. Enforce the use of `for...of` instead of `for...in` for arrays
+    "prefer-for-of": "error",
+
+    // 47. Disallow declaring variables outside their usage scope
+    "no-shadow": "error",
+
+    // 48. Enforce consistent spacing before blocks and function bodies
+    "space-before-blocks": "error",
+
+    // 49. Disallow object literals with duplicate keys
+    "no-dupe-keys": "error",
+
+    // 50. Enforce consistent type checking with `typeof` operator
+    "valid-typeof": "error"
   }
-  
+
   }
 
   
