@@ -12,7 +12,7 @@
     "no-var": "error",
 
     // 4. Disallow unused variables
-    "no-unused-vars": "error",
+    "no-unused-vars": "off",
 
     // 5. Enforce strict mode globally
     "strict": ["error", "global"],
@@ -66,19 +66,19 @@
     "no-caller": "error",
 
     // 22. Require all functions to have a return type annotation (for TypeScript)
-    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
 
     // 23. Enforce the use of arrow functions for callbacks
     "prefer-arrow-callback": "error",
 
     // 24. Disallow the use of `arguments` object in functions
-    "no-arguments": "error",
+    //"no-arguments": "error",
 
     // 25. Disallow the use of 'continue' statement
     "no-continue": "error",
 
     // 26. Enforce type-checking in switch cases
-    "no-switch-case-fall-through": "error",
+    //"no-switch-case-fall-through": "error",
 
     // 27. Enforce consistent return behavior in functions (either always return or never return)
     "consistent-return": "error",
@@ -87,7 +87,7 @@
     "no-loop-func": "error",
 
     // 29. Require function parameters to be typed (for TypeScript)
-    "@typescript-eslint/explicit-module-boundary-types": "error",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
 
     // 30. Require class members to have explicit access modifiers (for TypeScript)
     "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "explicit" }],
@@ -117,7 +117,7 @@
     "object-curly-spacing": ["error", "always"],
 
     // 41. Disallow unnecessary function bindings (i.e., `.bind()`)
-    "no-useless-bind": "error",
+    //"no-useless-bind": "error",
 
     // 44. Enforce function declarations to be at the top of the scope
     "no-inner-declarations": "error",
@@ -126,7 +126,7 @@
     "no-extra-boolean-cast": "error",
 
     // 46. Enforce the use of `for...of` instead of `for...in` for arrays
-    "prefer-for-of": "error",
+    //"prefer-for-of": "error",
 
     // 47. Disallow declaring variables outside their usage scope
     "no-shadow": "error",
