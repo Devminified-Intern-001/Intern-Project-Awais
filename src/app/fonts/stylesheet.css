@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Basic Commercial SR Pro';
+    src: url('BasicCommercialSRPro-Roman.eot');
+    src: local('Basic Commercial Soft Rounded Pro Roman'), local('BasicCommercialSRPro-Roman'),
+        url('BasicCommercialSRPro-Roman.eot?#iefix') format('embedded-opentype'),
+        url('BasicCommercialSRPro-Roman.woff2') format('woff2'),
+        url('BasicCommercialSRPro-Roman.woff') format('woff'),
+        url('BasicCommercialSRPro-Roman.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basic Commercial SR Pro';
+    src: url('BasicCommercialSRPro-Black.eot');
+    src: local('Basic Commercial Soft Rounded Pro Black'), local('BasicCommercialSRPro-Black'),
+        url('BasicCommercialSRPro-Black.eot?#iefix') format('embedded-opentype'),
+        url('BasicCommercialSRPro-Black.woff2') format('woff2'),
+        url('BasicCommercialSRPro-Black.woff') format('woff'),
+        url('BasicCommercialSRPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Basic Commercial SR Pro Roman';
+    src: url('BasicCommercialSRPro-Bold.eot');
+    src: local('Basic Commercial Soft Rounded Pro Bold'), local('BasicCommercialSRPro-Bold'),
+        url('BasicCommercialSRPro-Bold.eot?#iefix') format('embedded-opentype'),
+        url('BasicCommercialSRPro-Bold.woff2') format('woff2'),
+        url('BasicCommercialSRPro-Bold.woff') format('woff'),
+        url('BasicCommercialSRPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
