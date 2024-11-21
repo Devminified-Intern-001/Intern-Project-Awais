@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
 import React from "react";
 
 const signInPage = () => {
@@ -14,14 +15,14 @@ const signInPage = () => {
       </div>
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-24 bg-background">
-        <h1 className="text-3xl font-semibold mb-4 w-[363px] h-[45px] top-[284px] left-[771px]  ">
+        <h1 className="text-3xl font-bold mb-4 w-[363px] h-[45px] top-[284px] left-[771px]  ">
           Welcome to Start.
         </h1>
         <p className="text-sm text-secondary mb-6 w-[363px] h-[31px] top-[329px] left-[771px]">
           New Here?{" "}
-          <a href="/create-account" className="text-accent font-medium">
+          <Link href="/sign-Up" className="text-accent font-medium">
             Create an Account
-          </a>
+          </Link>
         </p>
 
         <form className="space-y-4">
@@ -29,7 +30,11 @@ const signInPage = () => {
             <label className="text-[#3f4254] text-sm font-medium block mb-2 ms-5">
               User Name
             </label>
-            <Input type="text" className="w-full rounded-full bg-secondary " />
+            <Input
+              type="text"
+              className="w-full rounded-full bg-secondary "
+              required
+            />
           </div>
 
           <div>

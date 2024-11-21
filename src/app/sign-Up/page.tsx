@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import React from "react";
+import Link from "next/link";
 
 const page = () => {
   return (
@@ -16,14 +17,14 @@ const page = () => {
         </div>
 
         <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-24 bg-background">
-          <h1 className="text-3xl font-semibold mb-4 w-[363px] h-[45px] top-[284px] left-[771px]  ">
+          <h1 className="text-3xl font-bold mb-4 w-[363px] h-[45px] top-[284px] left-[771px]  ">
             Sign up to get started.
           </h1>
           <p className="text-sm text-secondary mb-6 w-[363px] h-[31px] top-[329px] left-[771px]">
             ALready a user?{" "}
-            <a href="/create-account" className="text-accent font-medium">
+            <Link href="/sign-In" className="text-accent font-medium">
               Let&apos;s Sign-in
-            </a>
+            </Link>
           </p>
 
           <form className="space-y-4">
@@ -34,6 +35,7 @@ const page = () => {
               <Input
                 type="text"
                 className="w-full rounded-full bg-secondary "
+                required
               />
             </div>
 
@@ -42,8 +44,9 @@ const page = () => {
                 Email
               </label>
               <Input
-                type="text"
+                type="email"
                 className="w-full rounded-full bg-secondary "
+                required
               />
             </div>
 
@@ -63,6 +66,7 @@ const page = () => {
                 <Input
                   type="password"
                   className=" rounded-full bg-secondary w-full"
+                  required
                 />
               </div>
             </div>
@@ -71,10 +75,11 @@ const page = () => {
               <Checkbox
                 id="terms-checkbox"
                 className="border border-secondary rounded-md h-5 w-5 text-background focus:ring-accent checked:bg-accent checked:border-transparent"
+                required
               />
               <label
                 htmlFor="terms-checkbox"
-                className="text-sm text-secondary leading-tight"
+                className="text-sm text-[#909090] leading-tight"
               >
                 Creating an account means you’re okay with our Terms of Service,
                 Privacy Policy, and our default Notification Settings.
