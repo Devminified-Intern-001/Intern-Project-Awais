@@ -1,23 +1,51 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
 import React from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+import Image from "next/image";
 import Link from "next/link";
 
-const page = () => {
-  return (
-    <div>
-      <div className="flex flex-col md:flex-row h-screen">
-        <div className="hidden w-full lg:flex md:w-1/2 items-center justify-center bg-background">
-          <img
-            src="/Group189.png"
-            alt="Fresh vegetables"
-            className="h-full w-full object-cover"
-          />
-        </div>
+const signUpSchema = z.object({
+  username: z.string().min(5, "Username must be at least 5 characters long"),
+  email: z.string().email("Please enter a valid email address"),
+  password: z.string().min(6, "Password must be at least 6 characters long"),
+});
 
-        <div className="w-full lg:w-1/2 flex flex-col justify-center px-8 lg:px-24 bg-background">
-          <h1 className="text-3xl font-bold mb-4 w-[363px] h-[45px] top-[284px] left-[771px]  ">
+type SignUpFormData = z.infer<typeof signUpSchema>;
+
+const SignUpPage = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<SignUpFormData>({
+    resolver: zodResolver(signUpSchema),
+  });
+
+  const onSubmit = (data: SignUpFormData) => {
+    console.log(data);
+  };
+
+  return (
+    <div className="flex min-h-screen bg-background">
+      <div className="hidden lg:flex w-[583px] relative overflow-hidden">
+        <Image
+          src="/signup/signup.svg"
+          alt="Fresh vegetables"
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
+      </div>
+
+      <div className="w-full lg:w-1/2 flex flex-col justify-between p-8 lg:p-16 ml-52">
+        <div className="flex-grow flex flex-col justify-center">
+          <h1 className="text-3xl font-semibold mb-4 w-[363px] h-[45px] top-[284px] left-[771px]  ">
             Sign up to get started.
           </h1>
           <p className="text-sm text-secondary mb-6 w-[363px] h-[31px] top-[329px] left-[771px]">
@@ -27,51 +55,70 @@ const page = () => {
             </Link>
           </p>
 
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div>
-              <label className="text-[#3f4254] text-sm font-medium block mb-2 ms-5">
+              <label
+                htmlFor="username"
+                className="text-[#3f4254] text-sm font-medium block mb-2 ms-5"
+              >
                 User Name
               </label>
               <Input
+                id="username"
                 type="text"
-                className="w-full rounded-full bg-secondary "
-                required
+                className=" rounded-full bg-secondary w-[440px] h-[70px] "
+                {...register("username")}
               />
+              {errors.username && (
+                <p className="text-red-500 text-sm">
+                  {errors.username.message}
+                </p>
+              )}
             </div>
 
             <div>
-              <label className="text-[#3f4254] text-sm font-medium block mb-2 ms-5">
+              <label
+                htmlFor="email"
+                className="text-[#3f4254] text-sm font-medium block mb-2 ms-5"
+              >
                 Email
               </label>
               <Input
-                type="email"
-                className="w-full rounded-full bg-secondary "
-                required
+                id="email"
+                type="text"
+                className=" rounded-full bg-secondary w-[440px] h-[70px] "
+                {...register("email")}
               />
+              {errors.email && (
+                <p className="text-red-500 text-sm">{errors.email.message}</p>
+              )}
             </div>
 
             <div>
               <div className="flex justify-between ">
-                <label className="text-[#3f4254] text-sm font-medium block mb-2 ms-5">
+                <label
+                  htmlFor="password"
+                  className="text-[#3f4254] text-sm font-medium block mb-2 ms-5"
+                >
                   Password
                 </label>
-                {/* <a
-                href="/forgot-password"
-                className="text-sm text-accent font-medium ml-2"
-              >
-                Forgot Password?
-              </a> */}
               </div>
               <div className="flex justify-between items-center">
                 <Input
+                  id="password"
                   type="password"
-                  className=" rounded-full bg-secondary w-full"
-                  required
+                  className=" rounded-full bg-secondary  w-[440px] h-[70px] "
+                  {...register("password")}
                 />
               </div>
+              {errors.password && (
+                <p className="text-red-500 text-sm">
+                  {errors.password.message}
+                </p>
+              )}
             </div>
 
-            <div className="flex items-start gap-2 mt-4">
+            <div className="flex items-start gap-2 ">
               <Checkbox
                 id="terms-checkbox"
                 className="border border-secondary rounded-md h-5 w-5 text-background focus:ring-accent checked:bg-accent checked:border-transparent"
@@ -79,26 +126,27 @@ const page = () => {
               />
               <label
                 htmlFor="terms-checkbox"
-                className="text-sm text-[#909090] leading-tight"
+                className="text-sm text-secondary leading-tight"
               >
                 Creating an account means you’re okay with our Terms of Service,
                 Privacy Policy, and our default Notification Settings.
               </label>
             </div>
 
-            <div className="flex flex-col justify-between md:flex-row gap-4 mt-4 ]">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Button
+                type="submit"
                 className="bg-accent py-2 w-full rounded-full md:w-[183px] h-[61px] top-[676px] left-[771px] radius-[284px] "
-                style={{ boxShadow: "0px 17px 50px 0px #0000001A" }}
               >
                 Sign up
               </Button>
               <Button
                 variant="outline"
-                className="flex items-center w-full justify-center gap-2 border-accent text-accent py-2 rounded-full md:w-[234px] h-[61px] top-[676px] left-[977px] "
+                type="button"
+                className="flex items-center w-full justify-center gap-2 border-accent text-accent py-2 rounded-full md:w-[234px] h-[61px] top-[676px] left-[977px]  mr-36"
               >
-                <img
-                  src="/google.png"
+                <Image
+                  src="/signup/google-icon.svg"
                   alt="Google"
                   className="w-[2opx] h-[20px]"
                 />
@@ -107,11 +155,11 @@ const page = () => {
             </div>
           </form>
 
-          <div className="flex font-poppins justify-between align-center mt-40 text-sm text-accent w-[325px] h-[31] top-[916px] left-[771px] ">
-            <a href="/terms" className="w-[#FBD54E]">
+          <div className="flex font-poppins justify-between align-center mt-8 text-sm text-accent w-[325px] h-[31] top-[916px] left-[771px] ">
+            <Link href="/terms" className="w-[#FBD54E]">
               Terms & Conditions
-            </a>
-            <a href="/contact-us">Contact Us</a>
+            </Link>
+            <Link href="/contact-us">Contact Us</Link>
           </div>
         </div>
       </div>
@@ -119,4 +167,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SignUpPage;

@@ -4,6 +4,11 @@ export const basicCommercialSRPro = localFont({
   src: [
     {
       path: "./BasicCommercialSRPro-Light.woff2",
+      weight: "100",
+      style: "extra-light",
+    },
+    {
+      path: "./BasicCommercialSRPro-Light.woff2",
       weight: "300",
       style: "normal",
     },
