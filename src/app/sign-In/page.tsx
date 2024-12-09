@@ -2,12 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
 
 const signInPage = () => {
   return (
     <div className="flex flex-col md:flex-row h-screen">
       <div className="hidden w-full lg:flex md:w-1/2 items-center justify-center bg-background">
-        <img
+        <Image
           src="/Group-188.png"
           alt="Fresh vegetables"
           className="h-full w-full object-cover"
@@ -68,7 +69,7 @@ const signInPage = () => {
               variant="outline"
               className="flex items-center w-full justify-center gap-2 border-accent text-accent py-2 rounded-full md:w-[234px] h-[61px] top-[676px] left-[977px] "
             >
-              <img
+              <Image
                 src="/google.png"
                 alt="Google"
                 className="w-[2opx] h-[20px]"
