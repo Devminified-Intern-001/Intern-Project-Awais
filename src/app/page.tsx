@@ -131,13 +131,23 @@ export default function LandingPage() {
 
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <Image src="/landing/checkIcon.svg" alt="Check Icon" />
+                  <Image
+                    src="/landing/checkIcon.svg"
+                    alt="Check Icon "
+                    height={9}
+                    width={12}
+                  />
                   <span className="text-[#8c8c8c] font-light">
                     You can find the product easily.
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Image src="/landing/checkIcon.svg" alt="Check Icon" />
+                  <Image
+                    src="/landing/checkIcon.svg"
+                    alt="Check Icon"
+                    height={18.8}
+                    width={18.8}
+                  />
                   <span className="text-[#8c8c8c] font-light">
                     Latest and healthy products.
                   </span>
@@ -155,6 +165,8 @@ export default function LandingPage() {
                 src="/landing/ladyDoctor.svg"
                 alt="Doctor with certification"
                 className="w-full rounded-lg"
+                height={453}
+                width={363}
               />
 
               {/* Certification Card */}
@@ -165,6 +177,8 @@ export default function LandingPage() {
                       src="/landing/tick.svg"
                       className="h-3 w-3"
                       alt="tick"
+                      width="3"
+                      height="3"
                     />
                   </div>
                 </div>
@@ -191,6 +205,8 @@ export default function LandingPage() {
                       src="/landing/icon1.svg"
                       alt="landing Icon1"
                       className="w-8 h-8 bg-gray-200 rounded-full"
+                      height={30}
+                      width={30}
                     />
                     <div>
                       <p className="text-sm text-black/60 font-bold">
@@ -202,6 +218,8 @@ export default function LandingPage() {
                             src="/landing/sheild.svg"
                             className="w-3 h-3"
                             alt="sheild"
+                            height={12}
+                            width={12}
                           />
                         </span>
                         <p className="text-xs text-dimGrey/60 font-poppins font-medium">
@@ -215,6 +233,8 @@ export default function LandingPage() {
                       src="/landing/icon2.svg"
                       alt="landing icon2"
                       className="w-8 h-8 bg-gray-200 rounded-full"
+                      height={30}
+                      width={30}
                     />
                     <div>
                       <p className="text-sm text-primary/60 font-bold">
@@ -226,6 +246,8 @@ export default function LandingPage() {
                             src="/landing/sheild.svg"
                             className="w-3 h-3"
                             alt="sheild"
+                            height={12}
+                            width={12}
                           />
                         </span>
                         <p className="text-xs text-dimGrey/60 font-poppins font-medium">
@@ -257,6 +279,8 @@ export default function LandingPage() {
                 src="/landing/leftLady.svg"
                 alt="Customer with groceries"
                 className="w-full rounded-lg"
+                height={453}
+                width={363}
               />
 
               {/* Review Card */}
@@ -267,6 +291,8 @@ export default function LandingPage() {
                       src="/landing/anna.svg"
                       alt="Avatar"
                       className="w-full h-full object-cover"
+                      height={66}
+                      width={66}
                     />
                   </div>
                   <div className="grid place-content-center place-items-start">
@@ -298,6 +324,8 @@ export default function LandingPage() {
                         src="/landing/man.svg"
                         alt="Review avatar"
                         className="w-full h-full object-cover"
+                        width="50"
+                        height="50"
                       />
                     </div>
                     <div className="flex flex-col justify-cente gap-1">
@@ -309,7 +337,12 @@ export default function LandingPage() {
 
                 {/* Quote icon */}
                 <div className="absolute -top-[-19px] -right-[-10px] p-2 rounded-lg">
-                  <Image src="/landing/quotes.svg" alt="quotesIcon" />
+                  <Image
+                    src="/landing/quotes.svg"
+                    alt="quotesIcon"
+                    width="22"
+                    height="16"
+                  />
                 </div>
               </Card>
             </div>
@@ -336,7 +369,12 @@ export default function LandingPage() {
               <Button className="bg-accent place-self-end text-black font-bold hover:bg-accent/90 mt-4 h-16 w-56 text-[16px] rounded-full shadow-xl">
                 See more
                 <span className="ml-2">
-                  <Image src="/landing/rarr.svg" alt="rightArrow" />
+                  <Image
+                    src="/landing/rarr.svg"
+                    alt="rightArrow"
+                    height={9}
+                    width={20.2}
+                  />
                 </span>
               </Button>
             </div>
@@ -382,6 +420,8 @@ export default function LandingPage() {
             src="/landing/newssection.png"
             alt="Newsletter"
             className="w-full h-full object-cover "
+            width="1087"
+            height="344"
           />
           <div className="absolute bg-primary/10 inset-0"></div>
           <div className="absolute inset-0 flex flex-col items-center justify-center space-y-6 text-center z-10">
@@ -397,6 +437,8 @@ export default function LandingPage() {
                     src="/landing/envelope.svg"
                     alt="Envelope Icon"
                     className="w-5 h-5"
+                    height={20}
+                    width={20}
                   />
                 </span>
 
