@@ -34,7 +34,9 @@ const SignInPage = () => {
         <Image
           src="/signin/signin.svg"
           alt="Fresh vegetables"
-          className="h-full w-full object-cover"
+          layout="fill"
+          objectFit="cover"
+          priority
         />
       </div>
 
@@ -103,6 +105,8 @@ const SignInPage = () => {
                 src="/signin/google-icon.svg"
                 alt="Google"
                 className="w-[2opx] h-[20px] "
+                width={20}
+                height={20}
               />
               Sign in with Google
             </Button>

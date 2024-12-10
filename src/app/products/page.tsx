@@ -4,7 +4,7 @@ import FilterSidebar from "@/components/filter-sidebar";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import HeroSection from "@/components/hero-Section";
-import { Pagination } from "@/components/ui/pagination";
+import Pagination from "@/components/pagination";
 import ProductCard from "@/components/product-card";
 import React from "react";
 
@@ -83,10 +83,10 @@ const Products = () => {
               showButton={true}
               cols="3"
             />
-            <div className="mt-8 flex justify-center">
-              <Pagination />
-            </div>
           </div>
+        </div>
+        <div className="ml-80">
+          <Pagination />
         </div>
       </div>
 

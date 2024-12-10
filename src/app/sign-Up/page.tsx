@@ -149,6 +149,8 @@ const SignUpPage = () => {
                   src="/signup/google-icon.svg"
                   alt="Google"
                   className="w-[2opx] h-[20px]"
+                  width={20}
+                  height={20}
                 />
                 Sign up with Google
               </Button>
